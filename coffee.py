@@ -8,3 +8,9 @@ class Coffee:
     @property
     def name(self):
         return self._name
+    
+    def orders(self):
+        return [order for order in Order.all if order.coffee == self]
+    
+    def cofees(self):
+        return list({order.customer for order in self.orders()})
