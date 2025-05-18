@@ -12,7 +12,7 @@ class Coffee:
     def orders(self):
         return [order for order in Order.all if order.coffee == self]
     
-    def cofees(self):
+    def coffees(self):
         return list({order.customer for order in self.orders()})
     
     def num_orders(self):

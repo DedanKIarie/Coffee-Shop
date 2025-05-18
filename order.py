@@ -1,6 +1,8 @@
 class Order:
     all = []
     def __init__(self, customer, coffee, price):
+        from customer import Customer
+        from coffee import Coffee
         if not isinstance(customer, Customer):
             raise TypeError("customer must be a Customer instance")
         if not isinstance(coffee,Coffee):
